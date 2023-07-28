@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@stomp/stompjs": "^7.0.0",
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "tailwind-scrollbar-hide": "^1.1.7"
   }
 }

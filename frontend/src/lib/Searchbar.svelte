@@ -1,11 +1,4 @@
-<script>
-
-    import {Wyrs} from "./stores/wyrStore.js";
-    import {onMount} from "svelte";
-
-
-
-</script>
+<script></script>
 
 
 <div class="ml-20 text-[1.75rem]  active:text-white text-neutral-300 m-4 [calc(100vw-20rem)]  rounded-2xl">

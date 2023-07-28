@@ -65,13 +65,11 @@
             }
         })
     }
-
-
 </script>
 
 
-<div class="flex bg-neutral-800 w-[calc(100vw-20rem)] h-[calc(100vh-5.6rem)] overflow-scroll  rounded-tl-2xl rou pl-10 flex-col ml-20 ">
-    <div class="flex place-items-center flex-col overflow-auto">
+<div class="flex bg-neutral-800 w-full h-[calc(100vh-5.6rem)] overflow-scroll rounded-tl-2xl  pr-10 flex-col ">
+    <div class="flex place-items-center flex-col overflow-auto scrollbar-hide">
         <div>
             <!--<button class="text-white text-4xl" on:click={() => createwyr("1103388742976286742")}>SendWyr</button>-->
             {#if creating}
