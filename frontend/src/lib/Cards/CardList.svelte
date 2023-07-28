@@ -10,14 +10,15 @@
     let creating = true
 
 
+
     const stompClient = new Client({
-        brokerURL: "ws://localhost:8080/gs-guide-websocket",
+        brokerURL: import.meta.env.VITE_WEBSOCKET+"/gs-guide-websocket",
 
     })
 
     Wyrs.set(axios({
             method: 'get',
-            url: "http://localhost:8080/getAllWyr",
+            url: import.meta.env.VITE_API_ENDPOINT + "/getAllWyr",
             withCredentials: false,
         }).then(resp => resp.data).then((DATA) => Wyrs.set(DATA))
     )
@@ -68,9 +69,8 @@
 </script>
 
 
-<div class="flex bg-neutral-800 w-full h-[calc(100vh-5.6rem)] overflow-scroll rounded-tl-2xl  pr-10 flex-col ">
-    <div class="flex place-items-center flex-col overflow-auto scrollbar-hide">
-        <div>
+<div class="flex px-7 bg-neutral-800 w-full h-[calc(100vh-5.6rem)] place-content-center rounded-tl-2xl ">
+    <div class="overflow-auto scrollbar-hide">
             <!--<button class="text-white text-4xl" on:click={() => createwyr("1103388742976286742")}>SendWyr</button>-->
             {#if creating}
                 <h1 class="text-[3rem] text-white font-bold font-sans ">WYR</h1>
@@ -78,7 +78,10 @@
                     <p>Waiting...</p>
                 {:then response}
                     {#each response as wyrs}
-                        <Card {wyrs}/>
+                        <div class="flex place-items-center">
+                            <Card {wyrs}/>
+                        </div>
+
 
                     {/each}
                 {:catch error}
@@ -91,5 +94,4 @@
             {/if}
 
         </div>
-    </div>
 </div>

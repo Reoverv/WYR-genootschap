@@ -23,8 +23,11 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@stomp/stompjs": "^7.0.0",
     "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "svelte-fa": "^3.0.4",
     "tailwind-scrollbar-hide": "^1.1.7"
   }
 }
