@@ -38,18 +38,6 @@ public class GenootschapApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        /*wyr w = wyrRepository.findByTitle("test");
-
-        reaction a = new reaction("Aap");
-        reaction o = new reaction("olifant", "10");
-
-        List<reaction> list = new ArrayList<>();
-        list.add(o);
-        list.add(a);
-        w.setReactions(list);
-
-        wyrRepository.save(w);*/
-
 
     }
 

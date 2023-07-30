@@ -10,7 +10,7 @@
     import {onMount} from "svelte";
     import {askToken} from "./lib/stores/tokenStore";
 
-
+    let innerWidth = 0
     let blur = true
 
     onMount(() => {
@@ -35,15 +35,25 @@
 
 </script>
 
+<svelte:window bind:innerWidth/>
+
 <div class="bg-neutral-900 h-screen transition-all">
-    <div class={blur ? "flex blur" : "flex flex-col"}>
-        <div class="flex">
+    <div class={blur ? "flex blur" : "flex"}>
+        <div class="flex flex-col ">
+
             <Title/>
-            <Searchbar/>
-        </div>
-        <div class="flex">
+
             <Nav/>
-            <CardList/>
+
+
+        </div>
+        <div class="grid w-full grid-cols-3">
+            <div class="xs:justify-self-end md:justify-self-stretch col-span-3">
+                <Searchbar/>
+            </div>
+            <div class="col-span-3">
+                <CardList/>
+            </div>
         </div>
     </div>
     {#if blur}

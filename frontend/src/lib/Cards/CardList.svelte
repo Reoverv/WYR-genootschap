@@ -10,9 +10,8 @@
     let creating = true
 
 
-
     const stompClient = new Client({
-        brokerURL: import.meta.env.VITE_WEBSOCKET+"/gs-guide-websocket",
+        brokerURL: import.meta.env.VITE_WEBSOCKET + "/gs-guide-websocket",
 
     })
 
@@ -71,27 +70,27 @@
 
 <div class="flex px-7 bg-neutral-800 w-full h-[calc(100vh-5.6rem)] place-content-center rounded-tl-2xl ">
     <div class="overflow-auto scrollbar-hide">
-            <!--<button class="text-white text-4xl" on:click={() => createwyr("1103388742976286742")}>SendWyr</button>-->
-            {#if creating}
-                <h1 class="text-[3rem] text-white font-bold font-sans ">WYR</h1>
-                {#await $Wyrs}
-                    <p>Waiting...</p>
-                {:then response}
-                    {#each response as wyrs}
-                        <div class="flex place-items-center">
-                            <Card {wyrs}/>
-                        </div>
+        <!--<button class="text-white text-4xl" on:click={() => createwyr("1103388742976286742")}>SendWyr</button>-->
+        {#if creating}
+            <h1 class="text-[3rem] text-white font-bold font-sans ">WYR</h1>
+            {#await $Wyrs}
+                <p>Waiting...</p>
+            {:then response}
+                {#each response as wyrs}
+                    <div class="flex place-items-center">
+                        <Card {wyrs}/>
+                    </div>
 
 
-                    {/each}
-                {:catch error}
-                    <p>Oops er is iets misgegaan {error}</p>
-                {/await}
-                <!--            <Card/>-->
-                <!--            <Card/>-->
-            {:else}
-                <CreateCard type="WYR"/>
-            {/if}
+                {/each}
+            {:catch error}
+                <p>Oops er is iets misgegaan {error}</p>
+            {/await}
+            <!--            <Card/>-->
+            <!--            <Card/>-->
+        {:else}
+            <CreateCard type="WYR"/>
+        {/if}
 
-        </div>
+    </div>
 </div>

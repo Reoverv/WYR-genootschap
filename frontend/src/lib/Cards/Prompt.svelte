@@ -40,7 +40,7 @@
 <div class="flex place-content-between  sm:pr-0">
     <div class="flex">
         <p class="xs:text-xl md:text-[2.625rem] ">{promptsplit[0]}</p>
-        <p class="xs:text-xl md:text-[2.625rem] ">{promptsentece}</p>
+        <p class="xs:text-lg  md:text-[2rem] ">{promptsentece}</p>
 
     </div>
     <div class="flex max-h-14  ">

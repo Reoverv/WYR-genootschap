@@ -41,9 +41,8 @@
 <svelte:window bind:innerWidth bind:innerHeight/>
 
 {#if condition}
-    <div class=" text-white ml-3 w-96  mt-10 text-2xl font-sans mr-10 font-semibold  cursor-pointer">
+    <div class="text-white ml-3 w-96  mt-10 text-2xl font-sans mr-10 font-semibold cursor-pointer">
         {#each NavItems as item, i}
-
 
             <div on:click={() => changeCurrentActive(i)} class={currentActive !== i ? "flex place-items-center p-2 mb-6 text-neutral-300" : "place-items-center flex p-2 mb-6 rounded-2xl border-2 border-opacity-50 border-white bg-neutral-800"}>
                 <Fa icon={faHouse}/>
